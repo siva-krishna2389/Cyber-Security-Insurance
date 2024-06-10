@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Quote Policy</title>
+</head>
+
+<body>
+    <div id="sect1" class="container">
+
+        <div class="text-center">
+
+            <h2>Self Cyber Insurance</h2>
+            <h6> Hi insured , Thanks For All The Details , Please Review Your Quote </h6>
+
+
+        </div>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0"
+                aria-valuemax="100">100%</div>
+        </div>
+        <br>
+        <div style="margin-bottom: 30px;" class="header">
+            <h3 style="margin-left: 10px;">Quote Policy</h3>
+        </div>
+        <form>
+            <form *ngFor ="let row of quoteDetails">
+
+                <div style="float:left;" class="mb-3">
+                    <label for="fullName" class="form-label"><b>Submission Number</b></label>
+                    <input type="text" id="fullName" size="40" value="3S548N23568925"/>
+                </div>
+
+                <div style="float:left;" class="mb-3">
+                    <label for="fullName" class="form-label"><b>Policy Period</b></label>
+                    <input type="text" id="fullName" size="40" value="{{row.effectiveDate}}"/>
+                </div>
+
+
+                <div style="float:left;" class="mb-3">
+                    <label for="fullName" class="form-label"> <b>Primary Name Insured</b></label>
+                    <input type="text" id="fullName" size="40" value="{{row.fullName}}">
+                </div>
+
+                <div style="float:left;" class="mb-3">
+                    <label for="address" class="form-label"> <b>Address</b></label>
+                    <input type="text" id="address" size="40" value="{{row.address}}">
+                </div>
+                <div style="float:left;" class="mb-3">
+                    <label for="country" class="form-label"> <b>country</b></label>
+                    <input type="text" id="country" size="40" value="{{row.country}}">
+                </div>
+                <div style="float:left;" class="mb-3">
+                    <label for="type" class="form-label"> <b>Address Type</b></label>
+                    <input type="text" id="type" size="40" value="{{row.address}}">
+                </div>
+                <div style="float:left;" class="mb-3">
+                    <label for="premium" class="form-label"> <b>Total Premium</b></label>
+                    <input type="text" id="premium" size="40" value="Rs.1326.00">
+                </div>
+                <div style="float:left;" class="mb-3">
+                    <label for="tax" class="form-label"> <b>Tax &Surcharges</b></label>
+                    <input type="text" id="tax" size="40" value="Rs.238.68">
+                </div>
+                <div style="float:left;" class="mb-3">
+                    <label for="total" class="form-label"> <b>Total Cost</b></label>
+                    <input type="text" id="total" size="40" value="Rs.1564.68">
+                </div>
+            </form>
+        </form>
+        <div style="clear:both;">&nbsp;</div>
+        <div class="text-center ">
+
+            <a style="color: #fff; margin-top: 10px;" routerLink='/getQuote'> 
+                <button type="button" class="btn btn-secondary btn-sm col-xs-2 margin-left">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Home
+            </button></a>
+
+            <a style="color: #fff; margin-top: 10px;" routerLink=' '> 
+                <button type="button" class="btn btn-secondary btn-sm col-xs-2 margin-left">
+              <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                    Print Quote </button> </a>
+
+            <a style="color: #fff; margin-top: 10px;" routerLink='/payment'> 
+                <button type="button" class="btn btn-secondary btn-sm col-xs-2 margin-left">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Buy Now </button> </a>
+        </div>
+
+        
+    </div>
+</body>
+
+</html>

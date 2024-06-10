@@ -1,0 +1,47 @@
+.conatiner{
+    position: inherit;
+}
+
+
+
+.form-label{
+    margin-left: 100px;
+   
+}
+
+label {
+    width:400px;
+    clear:left;
+    text-align:right;
+    padding-right:10px;
+   color: rgb(32, 31, 31);
+}
+
+ h3 ,h6{
+    margin-top:10px; 
+    margin-bottom: 10px;
+    color:rgb(59, 57, 57);
+} 
+h2{
+    color:rgb(59, 57, 57);
+}
+.button {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    bottom: 50%;
+    margin-bottom: 50px;
+  }
+  
+.margin-left{
+    margin-left: 80px !important;
+}
+
+#sect1 {  
+    height: 100%;  
+    color: #fff;background-image: url("../../assets/images/cyber-security.jpg");  
+    background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;  
+}   

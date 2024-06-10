@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Insurance</title>
+</head>
+
+<body>
+    <div id="sect1" class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="text-center">
+                        <h2>Cyber Security Insurance</h2>
+                        <h6>Let's Get Started</h6>
+                    </div>
+                    <form>
+
+                        <form [formGroup]="formValue" (ngSubmit)=landingDetails()>
+
+                            <div class="mb-3">
+                                <label for="zipcode" class="form-label">zip Code</label>
+                                <input type="number" formControlName="zipCode" class="form-control" id="zipcode"
+                                    placeholder="enter zip code">
+                                <span class="text-danger"
+                                    *ngIf="formValue.controls['zipCode'].dirty && formValue.hasError('required','zipCode')">*Zip
+                                    Code Is Required</span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Full Name</label>
+                                <input type="text" formControlName="fullName" class="form-control" id="fullName"
+                                    placeholder="enter full name">
+                                <span class="text-danger"
+                                    *ngIf="formValue.controls['fullName'].dirty && formValue.hasError('required','fullName')">*Full
+                                    Name Is Required</span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="mobileNumber" class="form-label"> Mobile Number</label>
+                                <input type="number" formControlName="mobileNumber" class="form-control"
+                                    id="mobileNumber" placeholder="enter mobile number">
+                                <span class="text-danger"
+                                    *ngIf="formValue.controls['mobileNumber'].dirty && formValue.hasError('required','mobileNumber')">*Mobile
+                                    Number Is Required</span>
+                            </div>
+
+                            <button type="submit" [disabled]="!formValue.valid" class="btn btn-primary">Get A
+                                Quote</button>
+
+                            <br>
+
+                            <a style="color: #fff; margin-top: 10px;" routerLink='/retriveQuote'>
+                                <button type="submit" class="btn" mat-stroked-buttoncolor="primary"> Retrive Quote
+                                </button> </a>
+
+
+                        </form>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+
+
+
+</html>

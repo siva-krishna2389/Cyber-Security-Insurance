@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Insurance</title>
+</head>
+
+<body>
+    <div id="sect1" class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="text-center">
+                        <h2>Cyber Security Insurance</h2>
+                        <h6>Let's Get Started</h6>
+                    </div>
+                    <form [formGroup]="formValue">
+                        
+                            <div class="mb-3">
+                                <label for="refId" class="form-label">Quote Reference ID</label>
+                                <input type="number" formControlName="refId" class="form-control" id="zipcode" placeholder="Please Enter Your Quote Reference ID" min="0" max="">
+                                <span class="text-danger"
+                                    *ngIf="formValue.controls['refId'].dirty && formValue.hasError('required','refId')">*Reference ID Is Required</span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mobileNumber"  class="form-label">Mobile Number</label>
+                                <input type="string" formControlName="mobileNumber" class="form-control" id="fullName" placeholder="Please Enter Your Registered Mobile Number">
+                                <span class="text-danger"
+                                    *ngIf="formValue.controls['mobileNumber'].dirty && formValue.hasError('required','mobileNumber')">*Mobile NUmber Is Required</span>
+                            </div>
+
+                            <a style="color: #fff; margin-top: 10px;" routerLink=' '> 
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" mat-stroked-buttoncolor="primary" type="submit" [disabled]="!formValue.valid">Submit
+                                </button> </a>
+
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+  <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Hello User</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="text-center">
+                <p>Please Take A Moment To Verify The Phone NUmber By Entering 4 Digit OTP Sent To Your Registered Mobile Number , This Helps Us To Confirm Your Identity And Secure Your Account</p>
+            </div>
+          <form >
+            <div class="mb-3">
+                <label for="fullName"  class="form-label">Full Name</label>
+                <input type="string" formControlName="fullName" class="form-control" id="fullName" placeholder="Enter OTP Sent To Registered Mobile Number">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" routerLink='/quotePolicy'>Submit</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</html>

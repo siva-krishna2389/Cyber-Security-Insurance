@@ -1,0 +1,27 @@
+{
+  "posts": [
+    {
+      "zipCode": 533890,
+      "fullName": "siva krishna",
+      "mobileNumber": 9398342486,
+      "id": 1
+    }
+  ],
+  "userDetails": [
+    {
+      "fullName": "siva krishna",
+      "mobileNumber": "09398342486",
+      "address": "1-18-19 visalaksshi nagar maredamma temple road",
+      "city": "visakhapatnam",
+      "state": "Andhra Pradesh",
+      "country": "India",
+      "zipCode": 533890,
+      "termType": "annual",
+      "effectiveDate": "2021-09-16",
+      "id": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

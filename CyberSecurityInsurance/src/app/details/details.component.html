@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Details</title>
+</head>
+
+<body>
+    <div id="sect1" class="container">
+
+
+        <div class="text-center">
+            <h2 style="margin-bottom: 20px;">Self Cyber Insurance</h2>
+            <h6> <b>Hi insured</b>,Please enter the details to get accurate quote</h6>
+        </div>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%
+            </div>
+        </div>
+        <div style="clear:both;">&nbsp;</div>
+        <div style="margin-bottom: 10px;" class="header">
+            <h3 style="margin-left: 10px;"><b>Personal Details</b></h3>
+        </div>
+        <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+        <form [formGroup]="formValue">
+            <div style="float:left;" class="mb-3">
+                <label for="fullName" class="form-label"><b>Full Name</b></label>
+                <input type="text" formControlName="fullName" id="fullName" size="40" placeholder="enter full name">
+            </div>
+
+            <div style="float:left;" class="mb-3">
+                <label for="mobileNumber" class="form-label"><b> Mobile Number</b></label>
+                <input type="text" formControlName="mobileNumber" id="mobileNumber" size="30"
+                    placeholder="enter mobile number">
+            </div>
+            <div style="clear:both;">&nbsp;</div>
+            <div style="float:left;" class="mb-3">
+                <label for="address" class="form-label"> <b>Address</b></label>
+                <input type="text" formControlName="address" id="address" size="40" placeholder="enter address">
+            </div>
+
+            <div style="float:left;" class="mb-3">
+                <label for="country" class="form-label"> <b>Country</b></label>
+                <input type="text" formControlName="country" id="country" size="30" placeholder="enter country name">
+            </div>
+            <div style="clear:both;">&nbsp;</div>
+            <div style="float:left;" class="mb-3">
+                <label for="city" class="form-label"> <b>City</b></label>
+                <input type="text" formControlName="city" id="city" size="40" placeholder="enter city name">
+            </div>
+
+            <div style="float:left;" class="mb-3">
+                <label for="state" class="form-label"><b>State</b></label>
+                <input type="text" formControlName="state" id="State" size="30" placeholder="enter state name">
+            </div>
+            <div style="clear:both;">&nbsp;</div>
+            <div style="float:left;" class="mb-3">
+                <label for="zipCode" class="form-label"><b>Zip Code</b></label>
+                <input type="number" formControlName="zipCode" id="zipCode" size="30" placeholder="enter zipCode">
+            </div>
+            <div style="clear:both;">&nbsp;</div>
+            <div style="margin-bottom: 10px;" class="header">
+                <h3 style="margin-left: 10px;"><b>Policy Details</b></h3>
+            </div>
+            <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+            <div class="mb-3">
+                <label for="termType" class="form-label"><b>Term Type</b></label>
+                <select formControlName="termType" name="termType">
+                    <option value="0">select</option>
+                    <option value="annual">Annual</option>
+                    <option value="Half-Yearly">Half-Yearly</option>
+                    <option value="Quaterly">Quaterly</option>
+                    <option value="Monthly">Monthly</option>
+                </select>
+            </div>
+            <div style="clear:both;">&nbsp;</div>
+            <div class="mb-3">
+                <label for="termType" class="form-label"><b>Effective Date</b></label>
+                <input type="date" formControlName="effectiveDate" birthday="dateOfBirth">
+            </div>
+        </form>
+        <br>
+
+        <div class="text-center ">
+
+            <a style="color: #fff; margin-top: 10px;" routerLink='/getQuote'>
+                <button type="button" class="btn btn-secondary btn-sm  col-xs-2 margin-left">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Back
+                </button></a>
+
+            <a style="color: #fff; margin-top: 10px;" routerLink='/coverage'>
+                <button type="button" (click)="postUserData()" class="btn btn-secondary btn-sm col-xs-2 margin-left">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Select Coverage
+                </button></a>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

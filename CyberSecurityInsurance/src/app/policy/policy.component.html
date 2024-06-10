@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Policy Review</title>
+</head>
+
+<body>
+    <div id="sect1" class="container">
+        <div class="text-center">
+            <h2 style=" margin-bottom: 20px;">Self Cyber Insurance</h2>
+            <h6 style="margin-top:20px; margin-bottom: 20px;"> Hi insured , Thanks For All The Details , Please Review
+                Your Quote </h6>
+        </div>
+        <br>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0"
+                aria-valuemax="100">75%</div>
+        </div>
+        <br>
+        <div style="margin-bottom: 30px;" class="header">
+            <h3 style="margin-left: 10px;"><b>Policy Review</b></h3>
+        </div>
+        <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+        <form *ngFor = "let row of policyDetails">
+            <div style="float:left;" class="mb-3">
+                <label for="fullName" class="form-label"><b>Primary Name Insured</b></label>
+                <input type="text" id="fullName" size="40" value="{{row.fullName}}"/>
+            </div>
+            <div style="float:left;" class="mb-3">
+                <label for="address" class="form-label"> <b>Address</b></label>
+                <input type="text" id="address" size="40" value="{{row.address}}">
+            </div>
+            <div style="float:left;" class="mb-3">
+                <label for="country" class="form-label"> <b>Product</b></label>
+                <input type="text" id="country" size="40" value="{{row.country}}">
+            </div>
+            <div style="float:left;" class="mb-3">
+                <label for="termType" class="form-label"><b>Effective Date</b></label>
+                <input effectiveDate="effectiveDate" size="40" value={{row.effectiveDate}}>
+            </div>
+            <div style="float:left;" class="mb-3">
+                <label for="termType" class="form-label"><b>Expiry Date</b></label>
+                <input expiryDate="expiryDate" size="40" value="2022-09-16">
+            </div>
+        </form>
+        <div style="clear:both;">&nbsp;</div>
+        <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+        <div class="d-grid gap-2 d-md-block">
+            <button type="button" class="btn btn-outline-dark btn-sm col-2 margin-left" >
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Policy Level Coverages
+            </button>
+            <button type="button" class="btn btn-outline-dark btn-sm col-2 margin-left">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Bank Cards Coverages
+            </button>
+            <button type="button" class="btn btn-outline-dark btn-sm col-2 margin-left">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> SSN Identity
+            </button>
+          </div>
+          <div style="clear:both;">&nbsp;</div>
+          <div style="clear:both;">&nbsp;</div>
+          <div style="clear:both;">&nbsp;</div>
+        <div class="text-center ">
+
+            <a style="color: #fff; margin-top: 10px;" routerLink='/details'>
+                <button type="button" class="btn btn-secondary btn-sm col-xs-2 margin-left">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Edit Policy
+                </button></a>
+
+            <a style="color: #fff; margin-top: 10px;" routerLink='/quotePolicy'>
+                <button type="button" class="btn btn-secondary btn-sm col-xs-2 margin-left">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Quote Policy
+                </button></a>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
